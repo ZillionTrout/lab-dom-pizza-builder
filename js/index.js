@@ -44,23 +44,42 @@ function renderPepperoni() {
 
 function renderMushrooms() {
   // Iteration 1: set the visibility of `<section class="mushroom">`
+  document.querySelectorAll('.mushroom').forEach((mushroom) => {
+    if (state.mushrooms) {
+      mushroom.style.visibility = 'visible';
+    } else {
+      mushroom.style.visibility = 'hidden';
+    }
+  });
 }
+
+
 
 function renderGreenPeppers() {
   // Iteration 1: set the visibility of `<section class="green-pepper">`
+  document.querySelectorAll('.green-pepper').forEach((pepper) => {
+    if (state.greenPeppers) {
+      pepper.style.visibility = 'visible';
+    } else {
+      pepper.style.visibility = 'hidden';
+    }
+  });
 }
+
+
 
 function renderWhiteSauce() {
   // Iteration 2: add/remove the class "sauce-white" of `<section class="sauce">`
 }
 
+
 function renderGlutenFreeCrust() {
   // Iteration 2: add/remove the class "crust-gluten-free" of `<section class="crust">`
 }
-
 function renderButtons() {
   // Iteration 3: add/remove the class "active" of each `<button class="btn">`
 }
+
 
 function renderPrice() {
   // Iteration 4: change the HTML of `<aside class="panel price">`
